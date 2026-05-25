@@ -579,21 +579,23 @@
 <!-- CONCERN NAV -->
 <nav class="concern-nav">
   <div class="concern-nav-inner">
-      <a class="concern-tab active" data-cat="visia">VISIA & Consultation</a>
-      <a class="concern-tab" data-cat="acne">Acne & Breakouts</a>
-      <a class="concern-tab" data-cat="pigmentation">Pigmentation</a>
-      <a class="concern-tab" data-cat="fine-lines">Fine Lines & Wrinkles</a>
-      <a class="concern-tab" data-cat="sagging">Sagging & Lifting</a>
-      <a class="concern-tab" data-cat="skin-boosters">Skin Boosters</a>
-      <a class="concern-tab" data-cat="facials">Facials</a>
-      <a class="concern-tab" data-cat="wellness">Wellness</a>
-      <a class="concern-tab" data-cat="body-sculpting">Body Sculpting</a>
-      <a class="concern-tab" data-cat="hair-removal">Laser Hair Removal</a>
-      <a class="concern-tab" data-cat="iv-therapy">NAD+ IV Therapy</a>
-      <a class="concern-tab" data-cat="silk-packages">Silk Packages</a>
-      <a class="concern-tab" data-cat="classic-packages">Classic Packages</a>
-      <a class="concern-tab" data-cat="booster-combo">Booster Combo</a>
-      <a class="concern-tab" data-cat="topup">Credit Top-Up</a>
+      <a class="concern-tab active" data-cat="visia">VISIA & CONSULTATION</a>
+      <a class="concern-tab" data-cat="facials">FACIALS & SKIN CARE</a>
+      <a class="concern-tab" data-cat="acne">ACNE & BREAKOUTS</a>
+      <a class="concern-tab" data-cat="pigmentation">PIGMENTATION</a>
+      <a class="concern-tab" data-cat="fine-lines">FINE LINES & WRINKLES</a>
+      <a class="concern-tab" data-cat="sagging">SAGGING & LIFTING</a>
+      <a class="concern-tab" data-cat="skin-boosters">SKIN BOOSTERS</a>
+      <a class="concern-tab" data-cat="injectables">INJECTABLES</a>
+      <a class="concern-tab" data-cat="wellness">WELLNESS & MASSAGE</a>
+      <a class="concern-tab" data-cat="body-sculpting">BODY SCULPTING</a>
+      <a class="concern-tab" data-cat="iv-therapy">IV THERAPY</a>
+      <a class="concern-tab" data-cat="hair-removal">LASER HAIR REMOVAL</a>
+      <a class="concern-tab" data-cat="beauty">BEAUTY SERVICES</a>
+      <a class="concern-tab" data-cat="silk-packages">SILK PACKAGES</a>
+      <a class="concern-tab" data-cat="classic-packages">CLASSIC PACKAGES</a>
+      <a class="concern-tab" data-cat="booster-combo">BOOSTER COMBO</a>
+      <a class="concern-tab" data-cat="topup">CREDIT TOP-UP</a>
   </div>
 </nav>
 
@@ -605,6 +607,7 @@
   <div class="service-grids">
     <div id="search-count" style="display:none;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-family:var(--sans);color:var(--text-light);padding:0 0 16px 0;"></div>
     <div id="search-results" style="display:none;"></div>
+
       <div class="service-grid" id="panel-visia">
         <div class="svc-card">
           <div class="svc-top">
@@ -615,20 +618,121 @@
             <div class="svc-price">Complimentary</div>
           </div>
           <p class="svc-desc">A full VISIA skin mapping session before every new treatment plan. Measures pigmentation, texture, pore quality, and subsurface collagen loss.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Complimentary VISIA Skin Analysis', 'Complimentary')">Add</button>
+          <button class="svc-btn" onclick="selectService(this,'Complimentary VISIA Skin Analysis','Complimentary')">Add</button>
+        </div>
+      </div>
+      <div class="service-grid hidden" id="panel-facials">
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">Signature Facial</div>
+              <div class="svc-duration">60 min</div>
+            </div>
+            <div class="svc-price">$118</div>
+          </div>
+          <p class="svc-desc">Our signature facial tailored to your skin type. Includes deep cleanse, exfoliation, extractions, mask, and moisturizing treatment.</p>
+          <button class="svc-btn" onclick="selectService(this,'Signature Facial','$118')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">HydraFacial</div>
+              <div class="svc-duration">45 min</div>
+            </div>
+            <div class="svc-price">$169</div>
+          </div>
+          <p class="svc-desc">FDA-approved three-step cleanse, extract, and hydrate for immediate radiance. Suitable for all skin types.</p>
+          <button class="svc-btn" onclick="selectService(this,'HydraFacial','$169')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">Hydra Scalp Treatment</div>
+              <div class="svc-duration">60 min</div>
+            </div>
+            <div class="svc-price">$198</div>
+          </div>
+          <p class="svc-desc">HydraFacial technology applied to the scalp — removing buildup, hydrating the hair follicles, and improving scalp health. Please shampoo before your appointment.</p>
+          <button class="svc-btn" onclick="selectService(this,'Hydra Scalp Treatment','$198')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">SkinCeuticals Facial</div>
+              <div class="svc-duration">60 min</div>
+            </div>
+            <div class="svc-price">$188</div>
+          </div>
+          <p class="svc-desc">Vitamin B5 and hyaluronic acid dual-action deep hydration facial restoring moisture balance and softening fine lines.</p>
+          <button class="svc-btn" onclick="selectService(this,'SkinCeuticals Facial','$188')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">French Guinot Facial</div>
+              <div class="svc-duration">60 min</div>
+            </div>
+            <div class="svc-price">$188</div>
+          </div>
+          <p class="svc-desc">Guinot's signature lift and tightening facial using biocompatible actives to restore firmness and radiance.</p>
+          <button class="svc-btn" onclick="selectService(this,'French Guinot Facial','$188')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">POLA Facial</div>
+              <div class="svc-duration">60 min</div>
+            </div>
+            <div class="svc-price">$198</div>
+          </div>
+          <p class="svc-desc">Japan's most prestigious skincare brand. POLA's proprietary technique targets deep-layer anti-glycation, lifting, and firming.</p>
+          <button class="svc-btn" onclick="selectService(this,'POLA Facial','$198')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">VI Peel</div>
+              <div class="svc-duration">45 min</div>
+            </div>
+            <div class="svc-price">$288</div>
+          </div>
+          <p class="svc-desc">Medical-grade chemical peel addressing fine lines, uneven skin tone, acne scars, and sun damage with minimal downtime.</p>
+          <button class="svc-btn" onclick="selectService(this,'VI Peel','$288')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">Chemical Peel</div>
+              <div class="svc-duration">45 min</div>
+            </div>
+            <div class="svc-price">$169</div>
+          </div>
+          <p class="svc-desc">Medical-grade peel removing dead skin cells and stimulating cell renewal for smoother, more even skin.</p>
+          <button class="svc-btn" onclick="selectService(this,'Chemical Peel','$169')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">GM Collin Botinol Anti-Aging</div>
+              <div class="svc-duration">60 min</div>
+            </div>
+            <div class="svc-price">$178</div>
+          </div>
+          <p class="svc-desc">Retinol, Argireline, and copper peptides smoothing expression lines and stimulating fibroblast growth.</p>
+          <button class="svc-btn" onclick="selectService(this,'GM Collin Botinol Anti-Aging','$178')">Add</button>
         </div>
       </div>
       <div class="service-grid hidden" id="panel-acne">
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">M22 AOPT Photofacial</div>
+              <div class="svc-name">M22 IPL Photofacial</div>
               <div class="svc-duration">45 min</div>
             </div>
-            <div class="svc-price">From $350</div>
+            <div class="svc-price">$499</div>
           </div>
-          <p class="svc-desc">Lumenis M22 AOPT targets active acne bacteria, reduces inflammation, and improves post-acne marks.</p>
-          <button class="svc-btn" onclick="selectService(this, 'M22 AOPT Photofacial', 'From $350')">Add</button>
+          <p class="svc-desc">Lumenis M22 IPL targets active acne bacteria, reduces inflammation, and improves post-acne marks.</p>
+          <button class="svc-btn" onclick="selectService(this,'M22 IPL Photofacial','$499')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
@@ -639,88 +743,110 @@
             <div class="svc-price">From $280</div>
           </div>
           <p class="svc-desc">Nd:YAG laser delivering controlled thermal energy to sebaceous glands, reducing oil production and clearing breakouts.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Fotona Acne Laser', 'From $280')">Add</button>
+          <button class="svc-btn" onclick="selectService(this,'Fotona Acne Laser','From $280')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">Endymed Gold RF Microneedling</div>
+              <div class="svc-name">Endymed RF Microneedling with Skin-Booster</div>
               <div class="svc-duration">60 min</div>
             </div>
-            <div class="svc-price">From $650</div>
+            <div class="svc-price">$799</div>
           </div>
-          <p class="svc-desc">Gold-plated tapered RF needles reducing sebum, minimising pores, and refining texture.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Endymed Gold RF Microneedling', 'From $650')">Add</button>
+          <p class="svc-desc">Gold-plated tapered RF needles combined with skin booster infusion — reducing sebum, minimising pores, and refining texture.</p>
+          <button class="svc-btn" onclick="selectService(this,'Endymed RF Microneedling with Skin-Booster','$799')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">Hydrafacial</div>
+              <div class="svc-name">HydraFacial</div>
               <div class="svc-duration">45 min</div>
             </div>
-            <div class="svc-price">From $169</div>
+            <div class="svc-price">$169</div>
           </div>
-          <p class="svc-desc">FDA-approved three-step cleanse, extract, and hydrate removing congestion and infusing hydrating actives.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Hydrafacial', 'From $169')">Add</button>
+          <p class="svc-desc">Three-step cleanse, extract, and hydrate removing congestion and infusing hydrating actives.</p>
+          <button class="svc-btn" onclick="selectService(this,'HydraFacial','$169')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">Broda Pro BHA Peel</div>
+              <div class="svc-name">Regular Microneedling</div>
               <div class="svc-duration">45 min</div>
             </div>
-            <div class="svc-price">From $169</div>
+            <div class="svc-price">$499</div>
           </div>
-          <p class="svc-desc">Medical-grade supramolecular salicylic acid peel penetrating sebaceous glands to clear congestion and control oil.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Broda Pro BHA Peel', 'From $169')">Add</button>
+          <p class="svc-desc">Collagen induction therapy using fine needles to stimulate skin repair, reduce acne scars and improve texture.</p>
+          <button class="svc-btn" onclick="selectService(this,'Regular Microneedling','$499')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">Chemical Peel</div>
+              <div class="svc-duration">45 min</div>
+            </div>
+            <div class="svc-price">$169</div>
+          </div>
+          <p class="svc-desc">Medical-grade peel penetrating sebaceous glands to clear congestion and control oil production.</p>
+          <button class="svc-btn" onclick="selectService(this,'Chemical Peel','$169')">Add</button>
         </div>
       </div>
       <div class="service-grid hidden" id="panel-pigmentation">
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">Picosure Picosecond Laser</div>
+              <div class="svc-name">PicoSure Laser</div>
               <div class="svc-duration">30 min</div>
             </div>
-            <div class="svc-price">From $450</div>
+            <div class="svc-price">$699</div>
           </div>
           <p class="svc-desc">Ultra-short picosecond pulses shattering melanin deposits for treating pigmentation and dark spots.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Picosure Picosecond Laser', 'From $450')">Add</button>
+          <button class="svc-btn" onclick="selectService(this,'PicoSure Laser','$699')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">M22 AOPT Photofacial</div>
+              <div class="svc-name">M22 IPL Photofacial</div>
               <div class="svc-duration">45 min</div>
             </div>
-            <div class="svc-price">From $350</div>
+            <div class="svc-price">$499</div>
           </div>
           <p class="svc-desc">Addresses sun damage, uneven tone, and vascular lesions across face, neck, and décolletage.</p>
-          <button class="svc-btn" onclick="selectService(this, 'M22 AOPT Photofacial', 'From $350')">Add</button>
+          <button class="svc-btn" onclick="selectService(this,'M22 IPL Photofacial','$499')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">Rejuran White Porcelain Booster</div>
+              <div class="svc-name">Rejuran Tone-Up</div>
               <div class="svc-duration">45 min</div>
             </div>
-            <div class="svc-price">From $550</div>
+            <div class="svc-price">$399</div>
           </div>
-          <p class="svc-desc">Rejuran's brightening polynucleotide booster activating skin cells and addressing excess melanin.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Rejuran White Porcelain Booster', 'From $550')">Add</button>
+          <p class="svc-desc">Rejuran's brightening polynucleotide booster activating skin cells and addressing excess melanin for a more even complexion.</p>
+          <button class="svc-btn" onclick="selectService(this,'Rejuran Tone-Up','$399')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">VI Peel</div>
+              <div class="svc-duration">45 min</div>
+            </div>
+            <div class="svc-price">$288</div>
+          </div>
+          <p class="svc-desc">Medical-grade peel targeting hyperpigmentation, sun damage, and uneven tone with visible results in one treatment.</p>
+          <button class="svc-btn" onclick="selectService(this,'VI Peel','$288')">Add</button>
         </div>
       </div>
       <div class="service-grid hidden" id="panel-fine-lines">
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">Botox / Xeomin</div>
+              <div class="svc-name">Botox</div>
               <div class="svc-duration">20 min</div>
             </div>
-            <div class="svc-price">From $12/unit</div>
+            <div class="svc-price">$450 / 50 units</div>
           </div>
           <p class="svc-desc">Botulinum toxin injections relaxing expression lines across forehead, brows, and eyes.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Botox / Xeomin', 'From $12/unit')">Add</button>
+          <button class="svc-btn" onclick="selectService(this,'Botox','$450 / 50 units')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
@@ -728,21 +854,21 @@
               <div class="svc-name">Thermage FLX</div>
               <div class="svc-duration">60 min</div>
             </div>
-            <div class="svc-price">From $2,200</div>
+            <div class="svc-price">$2,100</div>
           </div>
-          <p class="svc-desc">FDA-cleared monopolar RF delivering deep collagen stimulation — tightening, smoothing, and lifting.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Thermage FLX', 'From $2,200')">Add</button>
+          <p class="svc-desc">FDA-cleared monopolar RF delivering deep collagen stimulation — tightening, smoothing, and lifting with a single session.</p>
+          <button class="svc-btn" onclick="selectService(this,'Thermage FLX','$2,100')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">Fotona 4D Pro</div>
+              <div class="svc-name">Fotona 6D Pro Full Face</div>
               <div class="svc-duration">60 min</div>
             </div>
-            <div class="svc-price">From $1,200</div>
+            <div class="svc-price">$899</div>
           </div>
-          <p class="svc-desc">Four-pass laser protocol for volumetric facial rejuvenation from inside outward.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Fotona 4D Pro', 'From $1,200')">Add</button>
+          <p class="svc-desc">Six-pass laser protocol for comprehensive volumetric facial rejuvenation addressing lines, laxity, and texture.</p>
+          <button class="svc-btn" onclick="selectService(this,'Fotona 6D Pro Full Face','$899')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
@@ -750,45 +876,78 @@
               <div class="svc-name">TempSure RF</div>
               <div class="svc-duration">45 min</div>
             </div>
-            <div class="svc-price">From $499</div>
+            <div class="svc-price">$499</div>
           </div>
           <p class="svc-desc">Cynosure monopolar RF tightening skin and smoothing fine lines with zero downtime.</p>
-          <button class="svc-btn" onclick="selectService(this, 'TempSure RF', 'From $499')">Add</button>
+          <button class="svc-btn" onclick="selectService(this,'TempSure RF','$499')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">Dermal Filler</div>
-              <div class="svc-duration">30 min</div>
-            </div>
-            <div class="svc-price">From $650/syringe</div>
-          </div>
-          <p class="svc-desc">Hyaluronic acid filler restoring volume, softening lines, and enhancing contours.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Dermal Filler', 'From $650/syringe')">Add</button>
-        </div>
-        <div class="svc-card">
-          <div class="svc-top">
-            <div>
-              <div class="svc-name">Acupulse CO₂ Laser</div>
+              <div class="svc-name">AcuPulse CO₂ Laser</div>
               <div class="svc-duration">60 min</div>
             </div>
-            <div class="svc-price">From $1,100</div>
+            <div class="svc-price">$799</div>
           </div>
-          <p class="svc-desc">Lumenis fractional CO₂ resurfacing targeting fine lines and texture with ablative energy.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Acupulse CO₂ Laser', 'From $1,100')">Add</button>
+          <p class="svc-desc">Lumenis fractional CO₂ resurfacing targeting fine lines and texture with ablative precision.</p>
+          <button class="svc-btn" onclick="selectService(this,'AcuPulse CO₂ Laser','$799')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">Non-Ablative Fractional Laser</div>
+              <div class="svc-duration">45 min</div>
+            </div>
+            <div class="svc-price">$699</div>
+          </div>
+          <p class="svc-desc">Fractional laser stimulating collagen renewal and improving skin texture with minimal downtime.</p>
+          <button class="svc-btn" onclick="selectService(this,'Non-Ablative Fractional Laser','$699')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">Regular Microneedling</div>
+              <div class="svc-duration">45 min</div>
+            </div>
+            <div class="svc-price">$499</div>
+          </div>
+          <p class="svc-desc">Collagen induction therapy stimulating new collagen and elastin to smooth fine lines and improve firmness.</p>
+          <button class="svc-btn" onclick="selectService(this,'Regular Microneedling','$499')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">PRP Treatment</div>
+              <div class="svc-duration">60 min</div>
+            </div>
+            <div class="svc-price">$550</div>
+          </div>
+          <p class="svc-desc">Platelet-rich plasma activating cell regeneration, stimulating collagen, and repairing damaged skin.</p>
+          <button class="svc-btn" onclick="selectService(this,'PRP Treatment','$550')">Add</button>
         </div>
       </div>
       <div class="service-grid hidden" id="panel-sagging">
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">Ultherapy HIFU</div>
+              <div class="svc-name">Ultherapy Legacy</div>
               <div class="svc-duration">60 min</div>
             </div>
-            <div class="svc-price">From $1,800</div>
+            <div class="svc-price">$2,000</div>
           </div>
-          <p class="svc-desc">FDA-cleared micro-focused ultrasound lifting brow, chin, neck, and décolletage.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Ultherapy HIFU', 'From $1,800')">Add</button>
+          <p class="svc-desc">FDA-cleared micro-focused ultrasound lifting brow, chin, neck, and décolletage by stimulating the SMAS layer.</p>
+          <button class="svc-btn" onclick="selectService(this,'Ultherapy Legacy','$2,000')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">Ultherapy Prime</div>
+              <div class="svc-duration">75 min</div>
+            </div>
+            <div class="svc-price">$2,200</div>
+          </div>
+          <p class="svc-desc">Upgraded Ultherapy protocol with enhanced transducer coverage for more comprehensive lifting and tightening results.</p>
+          <button class="svc-btn" onclick="selectService(this,'Ultherapy Prime','$2,200')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
@@ -796,10 +955,21 @@
               <div class="svc-name">Thermage FLX</div>
               <div class="svc-duration">60 min</div>
             </div>
-            <div class="svc-price">From $2,200</div>
+            <div class="svc-price">$2,100</div>
           </div>
-          <p class="svc-desc">Single-session monopolar RF tightening for face, neck, and body. No downtime.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Thermage FLX', 'From $2,200')">Add</button>
+          <p class="svc-desc">Single-session monopolar RF tightening for face, neck, and body. No downtime, results lasting 1–2 years.</p>
+          <button class="svc-btn" onclick="selectService(this,'Thermage FLX','$2,100')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">Ultherapy + Thermage Combo</div>
+              <div class="svc-duration">90 min</div>
+            </div>
+            <div class="svc-price">$2,399</div>
+          </div>
+          <p class="svc-desc">The gold standard combination — Ultherapy targets deep structural lifting while Thermage tightens and smooths the surface.</p>
+          <button class="svc-btn" onclick="selectService(this,'Ultherapy + Thermage Combo','$2,399')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
@@ -807,10 +977,10 @@
               <div class="svc-name">XERF RF Lifting</div>
               <div class="svc-duration">45 min</div>
             </div>
-            <div class="svc-price">From $980</div>
+            <div class="svc-price">$1,500</div>
           </div>
-          <p class="svc-desc">World's first dual-frequency monopolar RF — FDA-cleared, results peak at 3 months, last 9–12 months.</p>
-          <button class="svc-btn" onclick="selectService(this, 'XERF RF Lifting', 'From $980')">Add</button>
+          <p class="svc-desc">World's first dual-frequency monopolar RF — FDA-cleared, reaching from dermis to SMAS for structural lifting.</p>
+          <button class="svc-btn" onclick="selectService(this,'XERF RF Lifting','$1,500')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
@@ -820,8 +990,8 @@
             </div>
             <div class="svc-price">From $800/vial</div>
           </div>
-          <p class="svc-desc">Poly-L-lactic acid biostimulator gradually rebuilding lost collagen volume.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Sculptra', 'From $800/vial')">Add</button>
+          <p class="svc-desc">Poly-L-lactic acid biostimulator gradually rebuilding lost collagen volume over 3–6 months.</p>
+          <button class="svc-btn" onclick="selectService(this,'Sculptra','From $800/vial')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
@@ -831,21 +1001,32 @@
             </div>
             <div class="svc-price">From $680</div>
           </div>
-          <p class="svc-desc">RF device stimulating collagen production and improving facial laxity.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Collagen Cannon', 'From $680')">Add</button>
+          <p class="svc-desc">RF device delivering thermal energy to stimulate collagen production and improve facial laxity.</p>
+          <button class="svc-btn" onclick="selectService(this,'Collagen Cannon','From $680')">Add</button>
         </div>
       </div>
       <div class="service-grid hidden" id="panel-skin-boosters">
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">Rejuran Healer</div>
+              <div class="svc-name">Rejuran Healing Essence</div>
               <div class="svc-duration">45 min</div>
             </div>
-            <div class="svc-price">From $600</div>
+            <div class="svc-price">$499</div>
           </div>
-          <p class="svc-desc">Classic PDRN skin booster restoring elasticity and supporting deep skin regeneration.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Rejuran Healer', 'From $600')">Add</button>
+          <p class="svc-desc">PDRN skin booster restoring elasticity, improving dullness and dryness, and supporting deep skin regeneration.</p>
+          <button class="svc-btn" onclick="selectService(this,'Rejuran Healing Essence','$499')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">Rejuran Tone-Up</div>
+              <div class="svc-duration">45 min</div>
+            </div>
+            <div class="svc-price">$399</div>
+          </div>
+          <p class="svc-desc">Brightening polynucleotide booster activating skin cells for a more even, luminous complexion.</p>
+          <button class="svc-btn" onclick="selectService(this,'Rejuran Tone-Up','$399')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
@@ -855,8 +1036,8 @@
             </div>
             <div class="svc-price">From $600</div>
           </div>
-          <p class="svc-desc">Plant-derived exosomes repairing the skin barrier, calming inflammation, stimulating collagen.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Exosome Skin Booster', 'From $600')">Add</button>
+          <p class="svc-desc">Plant-derived exosomes repairing the skin barrier, calming inflammation, stimulating collagen renewal.</p>
+          <button class="svc-btn" onclick="selectService(this,'Exosome Skin Booster','From $600')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
@@ -866,8 +1047,8 @@
             </div>
             <div class="svc-price">From $600</div>
           </div>
-          <p class="svc-desc">Micro-dose botulinum toxin delivered intradermally to reduce sebum and refine texture.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Botox Skin Booster', 'From $600')">Add</button>
+          <p class="svc-desc">Micro-dose botulinum toxin delivered intradermally to reduce sebum and refine skin texture.</p>
+          <button class="svc-btn" onclick="selectService(this,'Botox Skin Booster','From $600')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
@@ -877,79 +1058,134 @@
             </div>
             <div class="svc-price">From $450</div>
           </div>
-          <p class="svc-desc">French polynucleotide and HA booster deeply hydrating and restoring luminosity.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Filorga NCTF Booster', 'From $450')">Add</button>
+          <p class="svc-desc">French polynucleotide and HA booster deeply hydrating and restoring luminosity to sensitive or dry skin.</p>
+          <button class="svc-btn" onclick="selectService(this,'Filorga NCTF Booster','From $450')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">PRP Microneedling</div>
+              <div class="svc-name">PRP Treatment</div>
               <div class="svc-duration">60 min</div>
             </div>
-            <div class="svc-price">From $600</div>
+            <div class="svc-price">$550</div>
           </div>
           <p class="svc-desc">Platelet-rich plasma combined with microneedling to activate cell regeneration and repair.</p>
-          <button class="svc-btn" onclick="selectService(this, 'PRP Microneedling', 'From $600')">Add</button>
+          <button class="svc-btn" onclick="selectService(this,'PRP Treatment','$550')">Add</button>
         </div>
       </div>
-      <div class="service-grid hidden" id="panel-facials">
+      <div class="service-grid hidden" id="panel-injectables">
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">Hydrafacial</div>
-              <div class="svc-duration">45 min</div>
+              <div class="svc-name">Botox</div>
+              <div class="svc-duration">20 min</div>
             </div>
-            <div class="svc-price">From $169</div>
+            <div class="svc-price">$450 / 50 units</div>
           </div>
-          <p class="svc-desc">FDA-approved cleanse, extract, and hydrate for immediate radiance.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Hydrafacial', 'From $169')">Add</button>
+          <p class="svc-desc">Botulinum toxin relaxing expression lines across forehead, brows, and eyes. Additional units available.</p>
+          <button class="svc-btn" onclick="selectService(this,'Botox','$450 / 50 units')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">SkinCeuticals B5 Waterfall</div>
-              <div class="svc-duration">60 min</div>
+              <div class="svc-name">Xeomin</div>
+              <div class="svc-duration">20 min</div>
             </div>
-            <div class="svc-price">From $188</div>
+            <div class="svc-price">$399 / 50 units</div>
           </div>
-          <p class="svc-desc">Vitamin B5 and hyaluronic acid dual-action deep hydration facial.</p>
-          <button class="svc-btn" onclick="selectService(this, 'SkinCeuticals B5 Waterfall', 'From $188')">Add</button>
+          <p class="svc-desc">Pure-form botulinum toxin with no accessory proteins. Ideal for clients who have developed resistance to Botox.</p>
+          <button class="svc-btn" onclick="selectService(this,'Xeomin','$399 / 50 units')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">POLA Black BA Anti-Aging</div>
-              <div class="svc-duration">60 min</div>
+              <div class="svc-name">Kybella</div>
+              <div class="svc-duration">30 min</div>
             </div>
-            <div class="svc-price">From $198</div>
+            <div class="svc-price">$499 / vial</div>
           </div>
-          <p class="svc-desc">POLA's flagship anti-glycation treatment with proprietary massage technique.</p>
-          <button class="svc-btn" onclick="selectService(this, 'POLA Black BA Anti-Aging', 'From $198')">Add</button>
+          <p class="svc-desc">FDA-approved deoxycholic acid permanently destroying submental fat cells to reduce double chin.</p>
+          <button class="svc-btn" onclick="selectService(this,'Kybella','$499 / vial')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">POLA Golden V-Face</div>
-              <div class="svc-duration">60 min</div>
+              <div class="svc-name">Sweat Injection (Xeomin)</div>
+              <div class="svc-duration">30 min</div>
             </div>
-            <div class="svc-price">From $298</div>
+            <div class="svc-price">$599 / up to 100U</div>
           </div>
-          <p class="svc-desc">POLA's most premium facial using RC extract for lifting and contouring.</p>
-          <button class="svc-btn" onclick="selectService(this, 'POLA Golden V-Face', 'From $298')">Add</button>
+          <p class="svc-desc">Xeomin injected into sweat glands to treat hyperhidrosis. Additional units at $9/unit.</p>
+          <button class="svc-btn" onclick="selectService(this,'Sweat Injection (Xeomin)','$599 / up to 100U')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">GM Collin Botinol Anti-Aging</div>
-              <div class="svc-duration">60 min</div>
+              <div class="svc-name">Shoulder / Leg Slimming (Xeomin)</div>
+              <div class="svc-duration">30 min</div>
             </div>
-            <div class="svc-price">From $178</div>
+            <div class="svc-price">$799 / up to 150U</div>
           </div>
-          <p class="svc-desc">Retinol, Argireline, and copper peptides smoothing lines and stimulating fibroblast growth.</p>
-          <button class="svc-btn" onclick="selectService(this, 'GM Collin Botinol Anti-Aging', 'From $178')">Add</button>
+          <p class="svc-desc">Xeomin relaxing the trapezius or calf muscles for slimming and contouring. Additional units at $9/unit.</p>
+          <button class="svc-btn" onclick="selectService(this,'Shoulder / Leg Slimming (Xeomin)','$799 / up to 150U')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">Face Slimming (Xeomin)</div>
+              <div class="svc-duration">20 min</div>
+            </div>
+            <div class="svc-price">$399 / up to 50U</div>
+          </div>
+          <p class="svc-desc">Xeomin injected into masseter muscles to slim the lower face and reduce jaw tension. Additional units at $9/unit.</p>
+          <button class="svc-btn" onclick="selectService(this,'Face Slimming (Xeomin)','$399 / up to 50U')">Add</button>
         </div>
       </div>
       <div class="service-grid hidden" id="panel-wellness">
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">Regular Massage</div>
+              <div class="svc-duration">60 min</div>
+            </div>
+            <div class="svc-price">$58</div>
+          </div>
+          <p class="svc-desc">Full-body relaxation massage using Swedish and deep tissue techniques for muscle relief and stress reduction.</p>
+          <button class="svc-btn" onclick="selectService(this,'Regular Massage','$58')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">Massage with Ultrasound</div>
+              <div class="svc-duration">60 min</div>
+            </div>
+            <div class="svc-price">$69</div>
+          </div>
+          <p class="svc-desc">Therapeutic massage enhanced with ultrasound technology for deeper muscle penetration and improved circulation.</p>
+          <button class="svc-btn" onclick="selectService(this,'Massage with Ultrasound','$69')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">Massage with Ultrasound & RF</div>
+              <div class="svc-duration">60–90 min</div>
+            </div>
+            <div class="svc-price">$79 / $138</div>
+          </div>
+          <p class="svc-desc">Premium massage combining ultrasound and RF heat for deep muscle relief and skin tightening. 60 min $79 · 90 min $138.</p>
+          <button class="svc-btn" onclick="selectService(this,'Massage with Ultrasound & RF','$79 / $138')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">Thai Scalp Massage</div>
+              <div class="svc-duration">60 min</div>
+            </div>
+            <div class="svc-price">$68</div>
+          </div>
+          <p class="svc-desc">Focused scalp and head massage using firm Thai pressure techniques. Flushing location only.</p>
+          <button class="svc-btn" onclick="selectService(this,'Thai Scalp Massage','$68')">Add</button>
+        </div>
         <div class="svc-card">
           <div class="svc-top">
             <div>
@@ -959,7 +1195,7 @@
             <div class="svc-price">From $48/hr</div>
           </div>
           <p class="svc-desc">Full-body aromatic oil massage along traditional pressure-point pathways.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Aromatic Meridian Therapy', 'From $48/hr')">Add</button>
+          <button class="svc-btn" onclick="selectService(this,'Aromatic Meridian Therapy','From $48/hr')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
@@ -969,19 +1205,8 @@
             </div>
             <div class="svc-price">From $68/30min</div>
           </div>
-          <p class="svc-desc">Aromatic massage elevated with RF heat for deeper muscle penetration.</p>
-          <button class="svc-btn" onclick="selectService(this, 'RF Warm SPA Therapy', 'From $68/30min')">Add</button>
-        </div>
-        <div class="svc-card">
-          <div class="svc-top">
-            <div>
-              <div class="svc-name">Thai Head Therapy</div>
-              <div class="svc-duration">30 min</div>
-            </div>
-            <div class="svc-price">From $38/30min</div>
-          </div>
-          <p class="svc-desc">Focused scalp and head massage using firm Thai pressure techniques.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Thai Head Therapy', 'From $38/30min')">Add</button>
+          <p class="svc-desc">Aromatic massage elevated with RF heat for deeper muscle penetration and lymphatic stimulation.</p>
+          <button class="svc-btn" onclick="selectService(this,'RF Warm SPA Therapy','From $68/30min')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
@@ -992,20 +1217,31 @@
             <div class="svc-price">From $48</div>
           </div>
           <p class="svc-desc">Facial sculpting using smooth ox bone tools to drain puffiness and define the jawline.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Ox Bone Massage', 'From $48')">Add</button>
+          <button class="svc-btn" onclick="selectService(this,'Ox Bone Massage','From $48')">Add</button>
         </div>
       </div>
       <div class="service-grid hidden" id="panel-body-sculpting">
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">EmSculpt Neo</div>
+              <div class="svc-name">EmSculpt Monthly Pass</div>
               <div class="svc-duration">30 min</div>
             </div>
-            <div class="svc-price">From $800/session</div>
+            <div class="svc-price">$850</div>
           </div>
-          <p class="svc-desc">FDA-cleared HIFEM+ and RF building muscle and reducing fat simultaneously.</p>
-          <button class="svc-btn" onclick="selectService(this, 'EmSculpt Neo', 'From $800/session')">Add</button>
+          <p class="svc-desc">FDA-cleared HIFEM+ and RF building muscle and reducing fat. Monthly unlimited pass for ongoing body contouring.</p>
+          <button class="svc-btn" onclick="selectService(this,'EmSculpt Monthly Pass','$850')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">EmSculpt Seasonal Pass</div>
+              <div class="svc-duration">30 min</div>
+            </div>
+            <div class="svc-price">$1,980</div>
+          </div>
+          <p class="svc-desc">Three-month EmSculpt access for sustained muscle building and fat reduction results.</p>
+          <button class="svc-btn" onclick="selectService(this,'EmSculpt Seasonal Pass','$1,980')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
@@ -1013,10 +1249,45 @@
               <div class="svc-name">Kybella</div>
               <div class="svc-duration">30 min</div>
             </div>
-            <div class="svc-price">From $600/vial</div>
+            <div class="svc-price">$499/vial</div>
           </div>
-          <p class="svc-desc">FDA-approved deoxycholic acid permanently destroying submental fat cells.</p>
-          <button class="svc-btn" onclick="selectService(this, 'Kybella', 'From $600/vial')">Add</button>
+          <p class="svc-desc">FDA-approved deoxycholic acid permanently destroying submental fat cells to reduce double chin.</p>
+          <button class="svc-btn" onclick="selectService(this,'Kybella','$499/vial')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">Tirzepatide Weight Loss Program</div>
+              <div class="svc-duration">—</div>
+            </div>
+            <div class="svc-price">$1,200 / 3 months</div>
+          </div>
+          <p class="svc-desc">Medically supervised GLP-1/GIP weight loss program. Includes consultation, prescription, and follow-up support.</p>
+          <button class="svc-btn" onclick="selectService(this,'Tirzepatide Weight Loss Program','$1,200 / 3 months')">Add</button>
+        </div>
+      </div>
+      <div class="service-grid hidden" id="panel-iv-therapy">
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">NAD+ IV 500mg</div>
+              <div class="svc-duration">90 min</div>
+            </div>
+            <div class="laser-toggle"><button class="laser-opt active" data-price="$499" onclick="setLaser(this,'NAD+ IV 500mg','$499','90 min')">$499</button><button class="laser-opt" data-price="6-pack $2,699" onclick="setLaser(this,'NAD+ IV 500mg','6-pack $2,699','90 min')">6-pack $2,699</button></div>
+          </div>
+          <p class="svc-desc">NAD+ infusion from FDA-certified Empower Pharmacy for cellular energy, cognitive clarity, and anti-aging at the mitochondrial level.</p>
+          <button class="svc-btn" onclick="selectService(this,'NAD+ IV 500mg',this.closest('.svc-card').querySelector('.laser-opt.active').dataset.price)">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">Whitening IV Therapy</div>
+              <div class="svc-duration">60 min</div>
+            </div>
+            <div class="laser-toggle"><button class="laser-opt active" data-price="$399" onclick="setLaser(this,'Whitening IV Therapy','$399','60 min')">$399</button><button class="laser-opt" data-price="4-pack $1,399" onclick="setLaser(this,'Whitening IV Therapy','4-pack $1,399','60 min')">4-pack $1,399</button></div>
+          </div>
+          <p class="svc-desc">Glutathione and vitamin C IV infusion for skin brightening, antioxidant support, and immune boost.</p>
+          <button class="svc-btn" onclick="selectService(this,'Whitening IV Therapy',this.closest('.svc-card').querySelector('.laser-opt.active').dataset.price)">Add</button>
         </div>
       </div>
       <div class="service-grid hidden" id="panel-hair-removal">
@@ -1026,7 +1297,7 @@
               <div class="svc-name">Upper Lip</div>
               <div class="svc-duration">15 min</div>
             </div>
-            <div class="laser-toggle"><button class="laser-opt active" data-price="$99" onclick="setLaser(this,'Upper Lip','$99','15 min')">$99</button><button class="laser-opt" data-price="$300" onclick="setLaser(this,'Upper Lip','$300','15 min')">5× $300</button></div>
+            <div class="laser-toggle"><button class="laser-opt active" data-price="$69" onclick="setLaser(this,'Upper Lip','$69','15 min')">$69</button><button class="laser-opt" data-price="5-pack $299" onclick="setLaser(this,'Upper Lip','5-pack $299','15 min')">5-pack $299</button></div>
           </div>
           <p class="svc-desc">ELITE+ dual-wavelength laser for the upper lip. Every 4–6 weeks.</p>
           <button class="svc-btn" onclick="selectService(this,'Upper Lip',this.closest('.svc-card').querySelector('.laser-opt.active').dataset.price)">Add</button>
@@ -1037,7 +1308,7 @@
               <div class="svc-name">Underarms</div>
               <div class="svc-duration">20 min</div>
             </div>
-            <div class="laser-toggle"><button class="laser-opt active" data-price="$109" onclick="setLaser(this,'Underarms','$109','20 min')">$109</button><button class="laser-opt" data-price="$400" onclick="setLaser(this,'Underarms','$400','20 min')">5× $400</button></div>
+            <div class="laser-toggle"><button class="laser-opt active" data-price="$89" onclick="setLaser(this,'Underarms','$89','20 min')">$89</button><button class="laser-opt" data-price="5-pack $399" onclick="setLaser(this,'Underarms','5-pack $399','20 min')">5-pack $399</button></div>
           </div>
           <p class="svc-desc">Full underarm laser hair removal with ELITE+ dual wavelength.</p>
           <button class="svc-btn" onclick="selectService(this,'Underarms',this.closest('.svc-card').querySelector('.laser-opt.active').dataset.price)">Add</button>
@@ -1045,181 +1316,151 @@
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">Lower Leg / Bikini / Full Face</div>
+              <div class="svc-name">Small Areas</div>
               <div class="svc-duration">30 min</div>
             </div>
-            <div class="laser-toggle"><button class="laser-opt active" data-price="$150" onclick="setLaser(this,'Lower Leg / Bikini / Full Face','$150','30 min')">$150</button><button class="laser-opt" data-price="$500" onclick="setLaser(this,'Lower Leg / Bikini / Full Face','$500','30 min')">5× $500</button></div>
+            <div class="laser-toggle"><button class="laser-opt active" data-price="$119" onclick="setLaser(this,'Small Areas','$119','30 min')">$119</button><button class="laser-opt" data-price="5-pack $499" onclick="setLaser(this,'Small Areas','5-pack $499','30 min')">5-pack $499</button></div>
           </div>
-          <p class="svc-desc">ELITE+ precision removal for lower legs, bikini line, or full face.</p>
-          <button class="svc-btn" onclick="selectService(this,'Lower Leg / Bikini / Full Face',this.closest('.svc-card').querySelector('.laser-opt.active').dataset.price)">Add</button>
+          <p class="svc-desc">Forearms, lower legs, bikini, or full face. ELITE+ precision removal.</p>
+          <button class="svc-btn" onclick="selectService(this,'Small Areas',this.closest('.svc-card').querySelector('.laser-opt.active').dataset.price)">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">Full Leg</div>
+              <div class="svc-name">Large Areas</div>
               <div class="svc-duration">45 min</div>
             </div>
-            <div class="laser-toggle"><button class="laser-opt active" data-price="$200" onclick="setLaser(this,'Full Leg','$200','45 min')">$200</button><button class="laser-opt" data-price="$800" onclick="setLaser(this,'Full Leg','$800','45 min')">5× $800</button></div>
+            <div class="laser-toggle"><button class="laser-opt active" data-price="$169" onclick="setLaser(this,'Large Areas','$169','45 min')">$169</button><button class="laser-opt" data-price="5-pack $699" onclick="setLaser(this,'Large Areas','5-pack $699','45 min')">5-pack $699</button></div>
           </div>
-          <p class="svc-desc">Complete full-leg hair removal from ankle to upper thigh.</p>
-          <button class="svc-btn" onclick="selectService(this,'Full Leg',this.closest('.svc-card').querySelector('.laser-opt.active').dataset.price)">Add</button>
+          <p class="svc-desc">Full arms, full legs, Brazilian, or full back.</p>
+          <button class="svc-btn" onclick="selectService(this,'Large Areas',this.closest('.svc-card').querySelector('.laser-opt.active').dataset.price)">Add</button>
+        </div>
+      </div>
+      <div class="service-grid hidden" id="panel-beauty">
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">Eyebrow Microblading</div>
+              <div class="svc-duration">90 min</div>
+            </div>
+            <div class="svc-price">$599</div>
+          </div>
+          <p class="svc-desc">Semi-permanent eyebrow technique using fine hair-like strokes for a natural, defined look lasting 1–2 years.</p>
+          <button class="svc-btn" onclick="selectService(this,'Eyebrow Microblading','$599')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top">
             <div>
-              <div class="svc-name">Full Arm / Brazilian / Full Back</div>
-              <div class="svc-duration">45 min</div>
+              <div class="svc-name">Eyelash Extensions</div>
+              <div class="svc-duration">90 min</div>
             </div>
-            <div class="laser-toggle"><button class="laser-opt active" data-price="$200" onclick="setLaser(this,'Full Arm / Brazilian / Full Back','$200','45 min')">$200</button><button class="laser-opt" data-price="$800" onclick="setLaser(this,'Full Arm / Brazilian / Full Back','$800','45 min')">5× $800</button></div>
+            <div class="svc-price">From $99</div>
           </div>
-          <p class="svc-desc">Comprehensive removal for full arms, Brazilian, or full back.</p>
-          <button class="svc-btn" onclick="selectService(this,'Full Arm / Brazilian / Full Back',this.closest('.svc-card').querySelector('.laser-opt.active').dataset.price)">Add</button>
+          <p class="svc-desc">Classic, hybrid, or volume lash extensions applied individually for a customized look.</p>
+          <button class="svc-btn" onclick="selectService(this,'Eyelash Extensions','From $99')">Add</button>
+        </div>
+        <div class="svc-card">
+          <div class="svc-top">
+            <div>
+              <div class="svc-name">Mole Removal</div>
+              <div class="svc-duration">30 min</div>
+            </div>
+            <div class="svc-price">From $100</div>
+          </div>
+          <p class="svc-desc">Safe, precise removal of benign moles and skin tags. Pricing based on size and quantity. Consultation required.</p>
+          <button class="svc-btn" onclick="selectService(this,'Mole Removal','From $100')">Add</button>
         </div>
       </div>
 
-      <div class="service-grid hidden" id="panel-iv-therapy">
-        <div class="svc-card">
-          <div class="svc-top">
-            <div>
-              <div class="svc-name">NAD+ IV 250mg</div>
-              <div class="svc-duration">60 min</div>
-            </div>
-            <div class="svc-price">From $350</div>
-          </div>
-          <p class="svc-desc">NAD+ infusion from FDA-certified Empower Pharmacy for cellular energy and recovery.</p>
-          <button class="svc-btn" onclick="selectService(this, 'NAD+ IV 250mg', 'From $350')">Add</button>
-        </div>
-        <div class="svc-card">
-          <div class="svc-top">
-            <div>
-              <div class="svc-name">NAD+ IV 500mg</div>
-              <div class="svc-duration">90 min</div>
-            </div>
-            <div class="svc-price">From $600</div>
-          </div>
-          <p class="svc-desc">High-dose NAD+ for deep cellular restoration and anti-aging at the mitochondrial level.</p>
-          <button class="svc-btn" onclick="selectService(this, 'NAD+ IV 500mg', 'From $600')">Add</button>
-        </div>
-      </div>
       <div class="service-grid hidden" id="panel-silk-packages">
         <div class="svc-card">
-          <div class="svc-top">
-            <div>
-              <div class="svc-name">Serica Reset</div>
-              <div class="svc-duration">Deep Cleanse &amp; Hydration</div>
-            </div>
-            <div class="laser-toggle"><button class="laser-opt active" data-price="$729" onclick="setLaser(this,'Serica Reset Package','$729','')">$729</button><button class="laser-opt" data-price="$1,949" onclick="setLaser(this,'Serica Reset Package','$1,949','')">Course $1,949</button></div>
-          </div>
-          <p class="svc-desc">Hydrafacial + Botox Skin Booster. For congestion, dullness, dehydrated skin, and enlarged pores. Includes complimentary VISIA before and after.</p>
+          <div class="svc-top"><div><div class="svc-name">Serica Reset</div><div class="svc-duration">Deep Cleanse &amp; Hydration</div></div><div class="laser-toggle"><button class="laser-opt active" data-price="$729" onclick="setLaser(this,'Serica Reset Package','$729','')">$729</button><button class="laser-opt" data-price="$1,949" onclick="setLaser(this,'Serica Reset Package','$1,949','')">Course $1,949</button></div></div>
+          <p class="svc-desc">HydraFacial + Botox Skin Booster. For congestion, dullness, and dehydrated skin.</p>
           <button class="svc-btn" onclick="selectService(this,'Serica Reset Package',this.closest('.svc-card').querySelector('.laser-opt.active').dataset.price)">Add</button>
         </div>
         <div class="svc-card">
-          <div class="svc-top">
-            <div>
-              <div class="svc-name">Serica Radiance</div>
-              <div class="svc-duration">Tone &amp; Brightening</div>
-            </div>
-            <div class="laser-toggle"><button class="laser-opt active" data-price="$1,179" onclick="setLaser(this,'Serica Radiance Package','$1,179','')">$1,179</button><button class="laser-opt" data-price="$4,749" onclick="setLaser(this,'Serica Radiance Package','$4,749','')">Course $4,749</button></div>
-          </div>
-          <p class="svc-desc">Picosure Picosecond Laser + Rejuran White Porcelain Booster. For pigmentation, dark spots, and dull complexion. Includes complimentary VISIA before and after.</p>
+          <div class="svc-top"><div><div class="svc-name">Serica Radiance</div><div class="svc-duration">Tone &amp; Brightening</div></div><div class="laser-toggle"><button class="laser-opt active" data-price="$1,179" onclick="setLaser(this,'Serica Radiance Package','$1,179','')">$1,179</button><button class="laser-opt" data-price="$4,749" onclick="setLaser(this,'Serica Radiance Package','$4,749','')">Course $4,749</button></div></div>
+          <p class="svc-desc">PicoSure Laser + Rejuran Tone-Up. For pigmentation, dark spots, and dull complexion.</p>
           <button class="svc-btn" onclick="selectService(this,'Serica Radiance Package',this.closest('.svc-card').querySelector('.laser-opt.active').dataset.price)">Add</button>
         </div>
         <div class="svc-card">
-          <div class="svc-top">
-            <div>
-              <div class="svc-name">Serica Renewal</div>
-              <div class="svc-duration">Structural Repair &amp; Regeneration</div>
-            </div>
-            <div class="laser-toggle"><button class="laser-opt active" data-price="$1,899" onclick="setLaser(this,'Serica Renewal Package','$1,899','')">$1,899</button><button class="laser-opt" data-price="$7,799" onclick="setLaser(this,'Serica Renewal Package','$7,799','')">Course $7,799</button></div>
-          </div>
-          <p class="svc-desc">Endymed Gold RF Microneedling + PRP 30ml + Botox Skin Booster. For acne scars, texture, and loss of elasticity. Includes complimentary VISIA before and after.</p>
+          <div class="svc-top"><div><div class="svc-name">Serica Renewal</div><div class="svc-duration">Structural Repair</div></div><div class="laser-toggle"><button class="laser-opt active" data-price="$1,899" onclick="setLaser(this,'Serica Renewal Package','$1,899','')">$1,899</button><button class="laser-opt" data-price="$7,799" onclick="setLaser(this,'Serica Renewal Package','$7,799','')">Course $7,799</button></div></div>
+          <p class="svc-desc">Endymed RF Microneedling + PRP + Botox Skin Booster. For acne scars and texture.</p>
           <button class="svc-btn" onclick="selectService(this,'Serica Renewal Package',this.closest('.svc-card').querySelector('.laser-opt.active').dataset.price)">Add</button>
         </div>
         <div class="svc-card">
-          <div class="svc-top">
-            <div>
-              <div class="svc-name">Serica Lift</div>
-              <div class="svc-duration">Lifting &amp; Tightening</div>
-            </div>
-            <div class="laser-toggle"><button class="laser-opt active" data-price="$2,449" onclick="setLaser(this,'Serica Lift Package','$2,449','')">$2,449</button><button class="laser-opt" data-price="$7,399" onclick="setLaser(this,'Serica Lift Package','$7,399','')">Course $7,399</button></div>
-          </div>
-          <p class="svc-desc">Thermage FLX 900 Shots + Botox Skin Booster. For sagging skin, jowls, and loss of facial contour. Includes complimentary VISIA before and after.</p>
+          <div class="svc-top"><div><div class="svc-name">Serica Lift</div><div class="svc-duration">Lifting &amp; Tightening</div></div><div class="laser-toggle"><button class="laser-opt active" data-price="$2,449" onclick="setLaser(this,'Serica Lift Package','$2,449','')">$2,449</button><button class="laser-opt" data-price="$7,399" onclick="setLaser(this,'Serica Lift Package','$7,399','')">Course $7,399</button></div></div>
+          <p class="svc-desc">Thermage FLX 900 Shots + Botox Skin Booster. For sagging skin and loss of contour.</p>
           <button class="svc-btn" onclick="selectService(this,'Serica Lift Package',this.closest('.svc-card').querySelector('.laser-opt.active').dataset.price)">Add</button>
         </div>
         <div class="svc-card">
-          <div class="svc-top">
-            <div>
-              <div class="svc-name">Serica Silk Package</div>
-              <div class="svc-duration">The Complete Experience</div>
-            </div>
-            <div class="laser-toggle"><button class="laser-opt active" data-price="$3,249" onclick="setLaser(this,'Serica Silk Package','$3,249','')">$3,249</button><button class="laser-opt" data-price="$12,649" onclick="setLaser(this,'Serica Silk Package','$12,649','')">Course $12,649</button></div>
-          </div>
-          <p class="svc-desc">Ultherapy Full Face + Eyes + Neck 1200 Shots + NAD+ 500mg IV + Ox Bone Massage. The full Serica journey. Includes complimentary VISIA before and after.</p>
+          <div class="svc-top"><div><div class="svc-name">Serica Silk</div><div class="svc-duration">The Complete Experience</div></div><div class="laser-toggle"><button class="laser-opt active" data-price="$3,249" onclick="setLaser(this,'Serica Silk Package','$3,249','')">$3,249</button><button class="laser-opt" data-price="$12,649" onclick="setLaser(this,'Serica Silk Package','$12,649','')">Course $12,649</button></div></div>
+          <p class="svc-desc">Ultherapy Full Face + NAD+ 500mg IV + Ox Bone Massage. The full Serica journey.</p>
           <button class="svc-btn" onclick="selectService(this,'Serica Silk Package',this.closest('.svc-card').querySelector('.laser-opt.active').dataset.price)">Add</button>
         </div>
       </div>
 
       <div class="service-grid hidden" id="panel-classic-packages">
         <div class="svc-card">
-          <div class="svc-top"><div><div class="svc-name">Aromatherapy &amp; Infrared Package</div><div class="svc-duration">10 Sessions</div></div><div class="svc-price">$480 <span style="text-decoration:line-through;color:var(--text-light);font-size:11px;">$680</span></div></div>
-          <p class="svc-desc">10 whole body massage sessions, heated stone therapy, and infrared phototherapy. Ideal for general relaxation and unwinding.</p>
+          <div class="svc-top"><div><div class="svc-name">Aromatherapy &amp; Infrared Package</div><div class="svc-duration">10 Sessions</div></div><div class="svc-price">$480</div></div>
+          <p class="svc-desc">10 whole body massage sessions, heated stone therapy, and infrared phototherapy.</p>
           <button class="svc-btn" onclick="selectService(this,'Aromatherapy & Infrared Package','$480')">Add</button>
         </div>
         <div class="svc-card">
-          <div class="svc-top"><div><div class="svc-name">Meridian Body Therapy Package</div><div class="svc-duration">10 Sessions</div></div><div class="svc-price">$480 <span style="text-decoration:line-through;color:var(--text-light);font-size:11px;">$680</span></div></div>
-          <p class="svc-desc">10 aromatic oil massages following Traditional Chinese Medicine pressure-point pathways, heated stone therapy, and infrared phototherapy.</p>
+          <div class="svc-top"><div><div class="svc-name">Meridian Body Therapy Package</div><div class="svc-duration">10 Sessions</div></div><div class="svc-price">$480</div></div>
+          <p class="svc-desc">10 aromatic oil massages following Traditional Chinese Medicine pressure-point pathways.</p>
           <button class="svc-btn" onclick="selectService(this,'Meridian Body Therapy Package','$480')">Add</button>
         </div>
         <div class="svc-card">
-          <div class="svc-top"><div><div class="svc-name">Signature Aromatherapy Package</div><div class="svc-duration">10 Sessions</div></div><div class="svc-price">$680 <span style="text-decoration:line-through;color:var(--text-light);font-size:11px;">$1,360</span></div></div>
+          <div class="svc-top"><div><div class="svc-name">Signature Aromatherapy Package</div><div class="svc-duration">10 Sessions</div></div><div class="svc-price">$680</div></div>
           <p class="svc-desc">10 sessions of our signature aromatherapy treatment.</p>
           <button class="svc-btn" onclick="selectService(this,'Signature Aromatherapy Package','$680')">Add</button>
         </div>
         <div class="svc-card">
-          <div class="svc-top"><div><div class="svc-name">Golden Season Card</div><div class="svc-duration">Multi-Treatment Bundle</div></div><div class="svc-price">$788 <span style="text-decoration:line-through;color:var(--text-light);font-size:11px;">$1,556</span></div></div>
+          <div class="svc-top"><div><div class="svc-name">Golden Season Card</div><div class="svc-duration">Multi-Treatment Bundle</div></div><div class="svc-price">$788</div></div>
           <p class="svc-desc">3 Signature Facials + 3 Premium Facial Care Sessions + 1 complimentary full-body aromatic oil massage.</p>
           <button class="svc-btn" onclick="selectService(this,'Golden Season Card','$788')">Add</button>
         </div>
         <div class="svc-card">
-          <div class="svc-top"><div><div class="svc-name">Platinum Season Card</div><div class="svc-duration">Multi-Treatment Bundle</div></div><div class="svc-price">$988 <span style="text-decoration:line-through;color:var(--text-light);font-size:11px;">$2,266</span></div></div>
-          <p class="svc-desc">6 Hydrafacial sessions + 1 complimentary full-body aromatic oil massage.</p>
+          <div class="svc-top"><div><div class="svc-name">Platinum Season Card</div><div class="svc-duration">Multi-Treatment Bundle</div></div><div class="svc-price">$988</div></div>
+          <p class="svc-desc">6 HydraFacial sessions + 1 complimentary full-body aromatic oil massage.</p>
           <button class="svc-btn" onclick="selectService(this,'Platinum Season Card','$988')">Add</button>
         </div>
         <div class="svc-card">
-          <div class="svc-top"><div><div class="svc-name">Diamond Quarter Card</div><div class="svc-duration">Premium Bundle</div></div><div class="svc-price">$2,988 <span style="text-decoration:line-through;color:var(--text-light);font-size:11px;">$6,800</span></div></div>
-          <p class="svc-desc">12 Hydrafacials + 12 Signature Facials + 4 Aromatherapy sessions + 1 Mesoderm Therapy.</p>
+          <div class="svc-top"><div><div class="svc-name">Diamond Quarter Card</div><div class="svc-duration">Premium Bundle</div></div><div class="svc-price">$2,988</div></div>
+          <p class="svc-desc">12 HydraFacials + 12 Signature Facials + 4 Aromatherapy sessions + 1 Mesoderm Therapy.</p>
           <button class="svc-btn" onclick="selectService(this,'Diamond Quarter Card','$2,988')">Add</button>
         </div>
       </div>
 
       <div class="service-grid hidden" id="panel-booster-combo">
         <div class="svc-card">
-          <div class="svc-top"><div><div class="svc-name">Skin Booster Triple Combo</div><div class="svc-duration">Face · Eye · Neck · Single Session</div></div><div class="svc-price">$799 <span style="text-decoration:line-through;color:var(--text-light);font-size:11px;">$1,500</span></div></div>
-          <p class="svc-desc">Face booster (Filorga NCTF or Exosome) + Eye booster (Rejuran Eye) + Neck booster in a single visit. Full-panel skin hydration and repair.</p>
-          <button class="svc-btn" onclick="selectService(this,'Skin Booster Triple Combo — Single Session','$799')">Add</button>
+          <div class="svc-top"><div><div class="svc-name">Skin Booster Triple Combo</div><div class="svc-duration">Face · Eye · Neck · Single</div></div><div class="svc-price">$799</div></div>
+          <p class="svc-desc">Face booster + Eye booster (Rejuran Eye) + Neck booster in a single visit. Full-panel skin hydration and repair.</p>
+          <button class="svc-btn" onclick="selectService(this,'Skin Booster Triple Combo — Single','$799')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top"><div><div class="svc-name">Skin Booster Triple Combo</div><div class="svc-duration">Face · Eye · Neck · 4-Session Course</div></div><div class="svc-price">$2,800</div></div>
-          <p class="svc-desc">Full 4-session course of the triple combo — Face, Eye, and Neck boosters per session. Best results with a full course.</p>
-          <button class="svc-btn" onclick="selectService(this,'Skin Booster Triple Combo — 4-Session Course','$2,800')">Add</button>
+          <p class="svc-desc">Full 4-session course of the triple combo. Best results with a full course.</p>
+          <button class="svc-btn" onclick="selectService(this,'Skin Booster Triple Combo — Course','$2,800')">Add</button>
         </div>
       </div>
 
       <div class="service-grid hidden" id="panel-topup">
         <div class="svc-card">
           <div class="svc-top"><div><div class="svc-name">Credit Top-Up · $1,000</div><div class="svc-duration">Receive $200 bonus credit</div></div><div class="svc-price">$1,000</div></div>
-          <p class="svc-desc">Pre-load $1,000 to your Serica account and receive $200 bonus credit — total value $1,200. Redeemable across all treatments at both locations.</p>
-          <button class="svc-btn" onclick="selectService(this,'Credit Top-Up $1,000 + $200 Bonus','$1,000')">Add</button>
+          <p class="svc-desc">Pre-load $1,000 and receive $200 bonus — total value $1,200. Redeemable across all treatments at both locations.</p>
+          <button class="svc-btn" onclick="selectService(this,'Credit Top-Up $1,000','$1,000')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top"><div><div class="svc-name">Credit Top-Up · $2,000</div><div class="svc-duration">Receive $500 bonus credit</div></div><div class="svc-price">$2,000</div></div>
-          <p class="svc-desc">Pre-load $2,000 to your Serica account and receive $500 bonus credit — total value $2,500. Redeemable across all treatments at both locations.</p>
-          <button class="svc-btn" onclick="selectService(this,'Credit Top-Up $2,000 + $500 Bonus','$2,000')">Add</button>
+          <p class="svc-desc">Pre-load $2,000 and receive $500 bonus — total value $2,500.</p>
+          <button class="svc-btn" onclick="selectService(this,'Credit Top-Up $2,000','$2,000')">Add</button>
         </div>
         <div class="svc-card">
           <div class="svc-top"><div><div class="svc-name">Credit Top-Up · $3,000</div><div class="svc-duration">Receive $1,000 bonus credit</div></div><div class="svc-price">$3,000</div></div>
-          <p class="svc-desc">Pre-load $3,000 to your Serica account and receive $1,000 bonus credit — total value $4,000. Our best value top-up tier.</p>
-          <button class="svc-btn" onclick="selectService(this,'Credit Top-Up $3,000 + $1,000 Bonus','$3,000')">Add</button>
+          <p class="svc-desc">Pre-load $3,000 and receive $1,000 bonus — total value $4,000. Our best value top-up tier.</p>
+          <button class="svc-btn" onclick="selectService(this,'Credit Top-Up $3,000','$3,000')">Add</button>
         </div>
       </div>
 
