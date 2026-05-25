@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Treatments by Concern | Serica Skincare & MedSpa</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --champagne: #EDE8DF;
+    --champagne-light: #FAFAF8;
+    --champagne-dark: #C8BBA8;
+    --gold: #B8966A;
+    --gold-light: #D4B48C;
+    --dark: #1A1410;
+    --dark-mid: #3A302A;
+    --white: #FFFFFF;
+    --text: #1A1410;
+    --text-light: #8A7A6A;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Jost', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--champagne-light);
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* TOP BAR */
+  .top-bar {
+    background: var(--dark);
+    color: var(--gold-light);
+    text-align: center;
+    padding: 5px 16px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: var(--sans);
+  }
+
+  /* NAV */
+  nav {
+    background: var(--white);
+    border-bottom: 1px solid var(--champagne-dark);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 8px rgba(26,20,16,0.06);
+  }
+
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 14px; height: 52px; }
+
+  .nav-links-mobile { display: flex; align-items: center; justify-content: space-evenly; flex: 1; padding: 0 8px; }
+
+  .nav-sep {
+    color: var(--champagne-dark);
+    font-size: 10px;
+    font-family: var(--sans);
+    user-select: none;
+  }
+
+  .nav-links-mobile a { font-size: 8.5px; letter-spacing: 0.8px; text-transform: uppercase; font-family: var(--sans); color: var(--text-light); text-decoration: none; padding: 0 7px; white-space: nowrap; }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--dark);
+    letter-spacing: 2px;
+    text-decoration: none;
+    line-height: 1.1;
+  }
+
+  .nav-logo span {
+    display: block;
+    font-size: 7px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-family: var(--sans);
+    margin-top: 2px;
+  }
+
+  .btn-book-mobile { background: var(--gold); color: var(--white); padding: 8px 12px; font-size: 8.5px; letter-spacing: 1.5px; text-transform: uppercase; font-family: var(--sans); font-weight: 500; text-decoration: none; white-space: nowrap; }
+
+
+
+  /* PAGE HERO */
+  .page-hero { background: var(--dark); padding: 36px 20px 28px; text-align: center; position: relative; overflow: hidden; }
+  .page-hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(-45deg, transparent, transparent 4px, rgba(255,255,255,0.012) 4px, rgba(255,255,255,0.012) 8px); }
+  .page-hero-brand { font-family: var(--serif); font-size: 18px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 10px; position: relative; }
+  .page-hero h1 { font-family: var(--serif); font-size: 36px; font-weight: 400; color: var(--white); line-height: 1.1; margin-bottom: 10px; position: relative; }
+  .page-hero h1 em { font-style: italic; color: var(--gold-light); }
+  .page-hero p { font-size: 12px; color: rgba(255,255,255,0.5); max-width: 300px; margin: 0 auto; line-height: 1.8; position: relative; }
+
+  /* CONCERN NAV */
+  .concern-nav { background: var(--white); border-bottom: 1px solid var(--champagne-dark); position: sticky; top: 52px; z-index: 90; overflow-x: auto; scrollbar-width: none; }
+  .concern-nav::-webkit-scrollbar { display: none; }
+  .concern-nav-inner { display: flex; padding: 0 16px; white-space: nowrap; }
+  .concern-nav a { font-size: 9px; letter-spacing: 1px; text-transform: uppercase; font-family: var(--sans); color: var(--text-light); text-decoration: none; padding: 10px 10px; white-space: nowrap; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; display: inline-block; }
+  .concern-nav a:hover, .concern-nav a.active { color: var(--dark); border-bottom-color: var(--gold); }
+
+  /* CONCERN SECTIONS */
+  .concern-section { padding: 28px 0; border-bottom: 1px solid var(--champagne-dark); scroll-margin-top: 110px; }
+
+  .concern-inner { padding: 0 16px; }
+  .concern-left { margin-bottom: 16px; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .concern-num { font-family: var(--serif); font-size: 48px; font-weight: 300; line-height: 1; color: rgba(176,122,40,0.5); flex-shrink: 0; margin-top: 15px; }
+  .concern-title-group { flex: 1; }
+  .concern-title { font-family: var(--serif); font-size: 26px; font-weight: 400; color: var(--dark); line-height: 1.2; margin-bottom: 6px; }
+  .concern-count { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); font-family: var(--sans); }
+  .concern-desc { font-size: 13px; color: var(--text-light); line-height: 1.8; margin-bottom: 16px; }
+
+  /* TREATMENT CARDS */
+  .treatments-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .treatment-card { background: var(--white); padding: 14px 12px; display: flex; flex-direction: column; border: 1px solid var(--champagne-dark); position: relative; }
+
+  .treatment-tag { display: inline-block; font-size: 7px; letter-spacing: 2px; text-transform: uppercase; font-family: var(--sans); background: var(--gold); color: var(--white); padding: 2px 6px; margin-bottom: 6px; width: fit-content; }
+  .treatment-name { font-family: var(--serif); font-size: 15px; font-weight: 500; color: var(--dark); margin-bottom: 6px; line-height: 1.2; }
+  .treatment-desc { font-size: 11px; color: var(--text-light); line-height: 1.6; flex: 1; margin-bottom: 10px; }
+  .treatment-learn { font-size: 10px; font-family: var(--sans); color: var(--text-light); text-decoration: underline; transition: color 0.2s; }
+  .treatment-learn:hover { color: var(--gold); }
+  .treatment-meta { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 10px; border-top: 1px solid var(--champagne); }
+  .treatment-price { font-family: var(--serif); font-size: 14px; color: var(--dark); }
+  .treatment-price span { display: block; font-size: 7px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-light); font-family: var(--sans); margin-bottom: 1px; }
+  .treatment-btn { font-size: 7px; letter-spacing: 1.5px; text-transform: uppercase; font-family: var(--sans); font-weight: 500; text-decoration: none; padding: 7px 10px; background: var(--dark); color: var(--white); white-space: nowrap; }
+
+  /* VISIA STRIP */
+  .visia-strip { background: var(--dark); padding: 36px 20px; text-align: center; position: relative; overflow: hidden; }
+  .visia-strip::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 80%, rgba(184,150,106,0.14) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(184,150,106,0.10) 0%, transparent 45%); }
+  .visia-strip > * { position: relative; }
+  .visia-eyebrow { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-family: var(--sans); margin-bottom: 10px; }
+  .visia-strip h2 { font-family: var(--serif); font-size: 28px; font-weight: 400; color: var(--white); margin-bottom: 10px; line-height: 1.2; }
+  .visia-strip p { font-size: 12px; color: rgba(255,255,255,0.5); max-width: 300px; margin: 0 auto 20px; line-height: 1.8; }
+  .visia-btns { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+  .btn-primary { background: var(--gold); color: var(--white); padding: 13px 28px; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; font-family: var(--sans); font-weight: 500; text-decoration: none; display: inline-block; }
+  .btn-ghost { color: rgba(255,255,255,0.6); border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 2px; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; font-family: var(--sans); text-decoration: none; }
+
+  /* FOOTER */
+  footer { background: var(--dark); }
+.footer-locations {
+    padding: 28px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    width: 100%;
+  }
+
+  .footer-loc-name { font-family: var(--serif); font-size: 15px; font-weight: 400; color: var(--white); margin-bottom: 4px; line-height: 1.2; }
+  .footer-loc-sub { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); font-family: var(--sans); margin-bottom: 10px; line-height: 1; }
+  .footer-loc-detail { font-size: 11px; color: rgba(255,255,255,0.45); font-family: var(--sans); line-height: 1.6; margin-bottom: 1px; }
+  .footer-loc-hours { margin-top: 12px; font-size: 10px; color: rgba(255,255,255,0.35); font-family: var(--sans); line-height: 1.7; }
+  .hours-row {
+    display: grid;
+    grid-template-columns: 58px 1fr;
+    gap: 4px;
+    line-height: 1.7;
+  }
+  .footer-loc-hours-title { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 4px; }
+
+  .footer-links {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .footer-links a {
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-family: var(--sans);
+    letter-spacing: 0.5px;
+    padding: 10px 14px;
+    border: 1px solid rgba(255,255,255,0.12);
+    display: block;
+    text-align: center;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .footer-links a:hover {
+    background: rgba(255,255,255,0.06);
+    color: var(--gold);
+  }
+
+  .footer-bottom-mobile {
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .footer-logo-mobile {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--white);
+    letter-spacing: 2px;
+  }
+
+  .footer-logo-mobile span {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-family: var(--sans);
+    margin-top: 5px;
+  }
+
+  .footer-socials {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .footer-socials a {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-family: var(--sans);
+  }
+
+  .footer-copy { font-size: 10px; color: rgba(255,255,255,0.25); font-family: var(--sans); padding-bottom: 12px; line-height: 1.7; }
+
+  /* TRENDING */
+  .trending { background: var(--champagne); padding: 44px 0; }
+  .trending-inner { padding: 0 20px; }
+  .trending-image { aspect-ratio: 4/3; background: rgba(26,20,16,0.04); border: 1px solid var(--champagne-dark); display: flex; align-items: center; justify-content: center; margin-bottom: 28px; position: relative; overflow: hidden; }
+  .trending-image::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 60%, rgba(184,150,106,0.12) 0%, transparent 60%); }
+  .trending-placeholder { display: flex; flex-direction: column; align-items: center; gap: 10px; opacity: 0.3; }
+  .trending-placeholder svg { width: 40px; height: 40px; }
+  .trending-placeholder span { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; font-family: var(--sans); color: var(--dark); }
+  .trending-tag { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; font-family: var(--sans); color: var(--gold); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+  .trending-new { font-size: 7px; letter-spacing: 2px; text-transform: uppercase; font-family: var(--sans); background: var(--gold); color: var(--white); padding: 2px 7px; }
+  .trending h2 { font-family: var(--serif); font-size: 36px; font-weight: 300; color: var(--dark); line-height: 1.05; margin-bottom: 10px; }
+  .trending h2 em { font-style: italic; color: var(--gold-light); }
+  .trending-sub { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light); font-family: var(--sans); margin-bottom: 14px; }
+  .trending-desc { font-size: 13px; color: var(--text-mid); line-height: 1.8; margin-bottom: 20px; }
+  .trending-bullets { list-style: none; margin-bottom: 24px; display: flex; flex-direction: column; gap: 9px; }
+  .trending-bullets li { font-size: 12px; color: var(--text-mid); display: flex; align-items: baseline; gap: 9px; }
+  .trending-bullets li::before { content: '—'; color: var(--gold); font-size: 10px; flex-shrink: 0; }
+  .trending-price { font-family: var(--serif); font-size: 12px; color: var(--text-light); margin-bottom: 16px; }
+  .trending-price strong { font-size: 28px; color: var(--dark); font-weight: 400; margin-right: 4px; }
+  .trending-actions { display: flex; flex-direction: column; gap: 12px; }
+  .trending-btn { background: var(--gold); color: var(--white); padding: 13px 24px; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; font-family: var(--sans); font-weight: 500; text-decoration: none; text-align: center; display: block; }
+  .trending-link { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; font-family: var(--sans); color: var(--text-light); text-decoration: none; text-align: center; display: block; border-bottom: 1px solid var(--champagne-dark); padding-bottom: 2px; width: fit-content; margin: 0 auto; }
+</style>
+</head>
+<body>
+
+<div class="top-bar">Serica Skincare &amp; MedSpa &nbsp;·&nbsp; NYC · Ktown &amp; Flushing</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo"><img src="data:image/png;base64,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" alt="Serica Skincare & MedSpa" style="height:32px;width:auto;display:block;"/></a>
+    <div class="nav-links-mobile">
+      <a href="serica-homepage-mobile.html">Home</a>
+      <span class="nav-sep">|</span>
+      <a href="serica-services-mobile.html" class="active">Services</a>
+      <span class="nav-sep">|</span>
+      <a href="serica-packages-mobile.html">Packages</a>
+      <span class="nav-sep">|</span>
+      <a href="serica-about-mobile.html">About</a>
+    </div>
+    <a href="#" class="btn-book-mobile">Book Now</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-brand">Serica Skincare &amp; MedSpa</div>
+  <h1>Treatments<br><em>by Concern</em></h1>
+  <p>Every skin concern has a clinical solution. Browse our full treatment menu, organised by the result you're looking for.</p>
+</div>
+
+<nav class="concern-nav">
+  <div class="concern-nav-inner">
+      <a href="#acne">Acne & Breakouts</a>
+      <a href="#pigmentation">Pigmentation & Dark Spots</a>
+      <a href="#fine-lines">Fine Lines & Wrinkles</a>
+      <a href="#sagging">Sagging & Lifting</a>
+      <a href="#pores">Enlarged Pores</a>
+      <a href="#redness">Redness & Sensitivity</a>
+      <a href="#hair-loss">Hair Loss & Thinning</a>
+      <a href="#scarring">Scarring & Texture</a>
+      <a href="#body-sculpting">Body Sculpting</a>
+      <a href="#wellness">Relaxation & Wellness</a>
+      <a href="#skin-boosters">Skin Boosters</a>
+      <a href="#facials">Facials & Skin Care</a>
+      <a href="#hair-removal">Laser Hair Removal</a>
+  
+  </div>
+</nav>
+
+  <section class="concern-section" style="background:var(--white);" id="acne">
+    <div class="concern-inner">
+      <div class="concern-left">
+        <div class="concern-num">01</div>
+        <div class="concern-title-group"><h2 class="concern-title">Acne & Breakouts</h2>
+        <div class="concern-count">6 Treatments Available</div></div>
+      </div>
+      <p class="concern-desc">From persistent adult acne to occasional breakouts, our targeted treatments address root causes — excess sebum, bacterial overgrowth, and inflammation — to leave skin clear and calm.</p>
+      <div class="treatments-grid">
+          <div class="treatment-card">
+            <div class="treatment-name">M22 AOPT Photofacial</div>
+            <div class="treatment-desc">Broad-spectrum light therapy targeting acne bacteria and post-inflammatory redness simultaneously. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$380</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Fotona Acne Laser</div>
+            <div class="treatment-desc">Nd:YAG laser penetrating deep into the dermis to destroy acne-causing bacteria and shrink sebaceous glands. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$420</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Gold RF Microneedling</div>
+            <div class="treatment-desc">Gold-plated tapered needles delivering radiofrequency energy into sebaceous glands to reduce oil production, improve texture, and tighten pores. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$680</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Hydrafacial</div>
+            <div class="treatment-desc">Multi-step cleanse, extract, and hydrate treatment ideal for oily and congested skin types. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$220</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Chemical Peel</div>
+            <div class="treatment-desc">Medical-grade acids unclog pores, reduce active breakouts and prevent future ones. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$180</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Botox Skin Booster</div>
+            <div class="treatment-desc">Micro-doses of botulinum toxin injected into the dermis to reduce sebum secretion and minimise pores. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$520</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="concern-section" style="background:var(--champagne);" id="pigmentation">
+    <div class="concern-inner">
+      <div class="concern-left">
+        <div class="concern-num">02</div>
+        <div class="concern-title-group"><h2 class="concern-title">Pigmentation & Dark Spots</h2>
+        <div class="concern-count">5 Treatments Available</div></div>
+      </div>
+      <p class="concern-desc">Sun damage, melasma, post-inflammatory hyperpigmentation — our pigment-correcting protocols precisely target excess melanin at every skin depth without disrupting surrounding tissue.</p>
+      <div class="treatments-grid">
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Picosure Laser</div>
+            <div class="treatment-desc">Ultra-short picosecond pulses shatter pigment particles without heat damage, ideal for stubborn melasma and sunspots. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$580</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">M22 AOPT Photofacial</div>
+            <div class="treatment-desc">Intense pulsed light selectively absorbed by melanin, breaking down surface pigmentation and evening skin tone. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$380</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Rejuran White Porcelain</div>
+            <div class="treatment-desc">Polynucleotide booster combined with brightening actives to repair the skin barrier and suppress melanin. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$620</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Chemical Peel</div>
+            <div class="treatment-desc">TCA and lactic acid formulations exfoliate pigmented layers and stimulate fresh, even-toned skin renewal. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$180</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Skin Brightening Facial</div>
+            <div class="treatment-desc">Enzyme-based treatment infusing vitamin C, niacinamide, and kojic acid for immediate luminosity. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$150</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="concern-section" style="background:var(--white);" id="fine-lines">
+    <div class="concern-inner">
+      <div class="concern-left">
+        <div class="concern-num">03</div>
+        <div class="concern-title-group"><h2 class="concern-title">Fine Lines & Wrinkles</h2>
+        <div class="concern-count">7 Treatments Available</div></div>
+      </div>
+      <p class="concern-desc">Dynamic expression lines, static creases, and volume loss each require a specific approach. Our physicians combine neuromodulators, fillers, and energy devices for comprehensive rejuvenation.</p>
+      <div class="treatments-grid">
+          <div class="treatment-card">
+            <div class="treatment-name">TempSure RF</div>
+            <div class="treatment-desc">Cynosure's monopolar radiofrequency device delivering controlled thermal energy to tighten skin, smooth fine lines, and improve nasolabial folds with no downtime. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$499</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Botox / Xeomin</div>
+            <div class="treatment-desc">FDA-approved neuromodulators precisely relaxing overactive facial muscles to smooth forehead and frown lines. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$14/unit</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Thermage FLX</div>
+            <div class="treatment-desc">Monopolar radiofrequency tightening deep collagen for a lifted, smoothed appearance that improves for up to six months. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$2,200</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Fotona 4D Pro</div>
+            <div class="treatment-desc">Four-pass laser protocol tightening the full facial structure from inside the oral cavity outward. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$1,400</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Dermal Filler</div>
+            <div class="treatment-desc">Hyaluronic acid fillers restoring volume to nasolabial folds, lips, and mid-face for natural-looking results. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$680/syringe</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Rejuran Healer</div>
+            <div class="treatment-desc">Salmon-derived PDRN skin booster that repairs damaged collagen fibres and stimulates new collagen production from within. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$580</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Acupulse CO₂ Laser</div>
+            <div class="treatment-desc">Fractional ablative laser resurfacing deep wrinkles and stimulating significant new collagen formation. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$1,200</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="concern-section" style="background:var(--champagne);" id="sagging">
+    <div class="concern-inner">
+      <div class="concern-left">
+        <div class="concern-num">04</div>
+        <div class="concern-title-group"><h2 class="concern-title">Sagging & Lifting</h2>
+        <div class="concern-count">6 Treatments Available</div></div>
+      </div>
+      <p class="concern-desc">Gravity, volume loss, and collagen decline all contribute to facial sagging. Our lifting protocols deliver focused energy at precise tissue depths to tighten, reposition, and rebuild structural support.</p>
+      <div class="treatments-grid">
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Ultherapy HIFU</div>
+            <div class="treatment-desc">FDA-cleared ultrasound energy at the SMAS layer — the same plane targeted in surgical facelifts — for significant lift. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$1,800</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Thermage FLX</div>
+            <div class="treatment-desc">Deep monopolar RF tightening the dermis and subcutaneous tissue with results lasting up to two years. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$2,200</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Fotona 4D Pro</div>
+            <div class="treatment-desc">Multi-wavelength laser addressing skin laxity at four tissue depths in a single session. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$1,400</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Collagen Cannon</div>
+            <div class="treatment-desc">High-velocity, needle-free collagen induction delivering actives to precise depths for immediate firmness. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$480</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Sculptra</div>
+            <div class="treatment-desc">Poly-L-lactic acid injections stimulating the body's own collagen production over several months, restoring lost facial volume and improving skin laxity with natural, gradual results. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$850/vial</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <span class="treatment-tag">New</span>
+            <div class="treatment-name">XERF Lifting</div>
+            <div class="treatment-desc">Next-generation extended RF technology delivering continuous thermal energy to the deep dermis for superior tightening. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$980</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="concern-section" style="background:var(--white);" id="pores">
+    <div class="concern-inner">
+      <div class="concern-left">
+        <div class="concern-num">05</div>
+        <div class="concern-title-group"><h2 class="concern-title">Enlarged Pores</h2>
+        <div class="concern-count">5 Treatments Available</div></div>
+      </div>
+      <p class="concern-desc">Enlarged pores stem from excess sebum, reduced skin elasticity, and sun damage. Our pore-minimising treatments address all three causes for a refined, porcelain-smooth complexion.</p>
+      <div class="treatments-grid">
+          <div class="treatment-card">
+            <div class="treatment-name">Endymed Gold RF</div>
+            <div class="treatment-desc">Fractional radiofrequency through insulated gold needles precisely shrinking sebaceous glands and tightening pore walls. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$680</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">M22 AOPT Photofacial</div>
+            <div class="treatment-desc">Broad-spectrum light targeting excess sebum and stimulating collagen to tighten enlarged pore structures. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$380</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Picosure Laser</div>
+            <div class="treatment-desc">Picosecond laser stimulating collagen via pressure waves, refining texture and reducing pore visibility. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$580</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Botox Skin Booster</div>
+            <div class="treatment-desc">Intradermal micro-botox directly reducing sebaceous gland activity, visibly minimising pore size within two weeks. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$520</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Hydrafacial</div>
+            <div class="treatment-desc">Vacuum-assisted extraction clearing congested pores followed by hydrating serum infusion to support tightening. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$220</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="concern-section" style="background:var(--champagne);" id="redness">
+    <div class="concern-inner">
+      <div class="concern-left">
+        <div class="concern-num">06</div>
+        <div class="concern-title-group"><h2 class="concern-title">Redness & Sensitivity</h2>
+        <div class="concern-count">4 Treatments Available</div></div>
+      </div>
+      <p class="concern-desc">Rosacea, broken capillaries, and reactive skin require gentle precision. Our vascular treatments selectively target and collapse problematic vessels while restoring the skin barrier.</p>
+      <div class="treatments-grid">
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Fotona Red Vein Removal</div>
+            <div class="treatment-desc">Nd:YAG laser selectively absorbed by haemoglobin, collapsing facial veins and telangiectasia with no surrounding damage. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$380</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">M22 AOPT IPL</div>
+            <div class="treatment-desc">Intense pulsed light targeting vascular redness and diffuse rosacea, evening skin tone over a series of treatments. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$380</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Exosome Skin Booster</div>
+            <div class="treatment-desc">Plant-derived exosomes delivering growth factors that repair the skin barrier and calm chronic inflammatory responses. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$580</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Algomask Repair Facial</div>
+            <div class="treatment-desc">Professional calming treatment using marine algae actives to reduce transient redness and restore barrier function. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$160</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="concern-section" style="background:var(--white);" id="hair-loss">
+    <div class="concern-inner">
+      <div class="concern-left">
+        <div class="concern-num">07</div>
+        <div class="concern-title-group"><h2 class="concern-title">Hair Loss & Thinning</h2>
+        <div class="concern-count">3 Treatments Available</div></div>
+      </div>
+      <p class="concern-desc">Androgenetic alopecia, postpartum shedding, and stress-related thinning all respond to our evidence-based hair restoration protocols that stimulate follicle activity from within.</p>
+      <div class="treatments-grid">
+          <div class="treatment-card">
+            <div class="treatment-name">PRP Scalp Restoration</div>
+            <div class="treatment-desc">Platelet-rich plasma from your own blood injected into the scalp to stimulate dormant follicles and promote regrowth. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$680</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Fotona Hair Growth</div>
+            <div class="treatment-desc">Low-level laser therapy increasing blood flow to follicles and extending the anagen growth phase. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$420</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Hydra Scalp Treatment</div>
+            <div class="treatment-desc">Medical-grade scalp cleanse and hydration protocol removing follicle-blocking buildup and delivering growth actives. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$180</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="concern-section" style="background:var(--champagne);" id="scarring">
+    <div class="concern-inner">
+      <div class="concern-left">
+        <div class="concern-num">08</div>
+        <div class="concern-title-group"><h2 class="concern-title">Scarring & Texture</h2>
+        <div class="concern-count">5 Treatments Available</div></div>
+      </div>
+      <p class="concern-desc">Acne scars, surgical scars, and rough texture require controlled wound-healing responses. Our resurfacing treatments stimulate collagen remodelling at precise depths to smooth and regenerate skin.</p>
+      <div class="treatments-grid">
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Acupulse CO₂ Laser</div>
+            <div class="treatment-desc">Fractional ablative CO₂ laser delivering the most powerful resurfacing available for atrophic acne scars. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$1,200</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Gold RF Microneedling</div>
+            <div class="treatment-desc">Gold-plated tapered needles delivering RF energy into scar tissue, breaking down fibrous bands and stimulating new collagen. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$680</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Resurfx Non-Ablative</div>
+            <div class="treatment-desc">Non-ablative fractional laser stimulating collagen without surface damage, ideal for darker skin tones. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$580</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Picosure Laser</div>
+            <div class="treatment-desc">Picosecond pressure waves breaking up scar tissue and activating the skin's natural healing cascade with minimal downtime. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$580</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Chemical Peel</div>
+            <div class="treatment-desc">High-strength peels dissolving the superficial scar layer and stimulating controlled regeneration for smoother texture. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$180</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="concern-section" style="background:var(--white);" id="body-sculpting">
+    <div class="concern-inner">
+      <div class="concern-left">
+        <div class="concern-num">09</div>
+        <div class="concern-title-group"><h2 class="concern-title">Body Sculpting</h2>
+        <div class="concern-count">2 Treatments Available</div></div>
+      </div>
+      <p class="concern-desc">Non-invasive body contouring and fat reduction treatments that reshape and tone without surgery or downtime, targeting stubborn areas that resist diet and exercise.</p>
+      <div class="treatments-grid">
+          <div class="treatment-card">
+            <div class="treatment-name">EmSculpt Neo</div>
+            <div class="treatment-desc">Combines HIFEM+ electromagnetic energy and RF in a single treatment — simultaneously building muscle and reducing fat for measurable body contouring results. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$800</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Kybella</div>
+            <div class="treatment-desc">FDA-approved deoxycholic acid treatment permanently destroying submental fat cells under the chin to improve your profile and reduce the appearance of a double chin. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$680/vial</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="concern-section" style="background:var(--champagne);" id="wellness">
+    <div class="concern-inner">
+      <div class="concern-left">
+        <div class="concern-num">10</div>
+        <div class="concern-title-group"><h2 class="concern-title">Relaxation & Wellness</h2>
+        <div class="concern-count">5 Treatments Available</div></div>
+      </div>
+      <p class="concern-desc">Massage, heat, and hands-on bodywork for when you need to actually decompress. These are proper spa treatments — not add-ons — designed to complement your clinical work or stand entirely on their own.</p>
+      <div class="treatments-grid">
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Aromatic Meridian Therapy</div>
+            <div class="treatment-desc">A full-body massage using warm therapeutic essential oils, performed along traditional pressure-point pathways to release deep muscle tension, improve circulation, and leave you genuinely unwound. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$48/hr</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">RF Warm SPA Therapy</div>
+            <div class="treatment-desc">Our aromatic oil massage elevated with gentle radiofrequency heat — the warmth penetrates deeper into muscle tissue than hands alone, melting tension while stimulating circulation and lymphatic flow. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$68/30min</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Thai Head Therapy</div>
+            <div class="treatment-desc">A focused scalp and head massage using firm, rhythmic Thai pressure techniques — remarkable for tension headaches, tight shoulders, and anyone who carries stress in their neck and upper back. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$38/30min</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Thai Head + Meridian Combo</div>
+            <div class="treatment-desc">The full hour: Thai head massage followed by a full-body aromatic oil massage. If you only have time for one wellness treatment, this is the one. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$68/hr</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Ox Bone Massage</div>
+            <div class="treatment-desc">A facial massage performed with smooth hand-carved ox bone tools — the firm, gliding pressure drains puffiness, defines the jawline and cheekbones, and leaves the face visibly lifted. Think of it as a manual facial sculpting treatment. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta">
+              <div class="treatment-price"><span>From</span>$48</div>
+              <a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="concern-section" style="background:var(--white);" id="skin-boosters">
+    <div class="concern-inner">
+      <div class="concern-left">
+        <div class="concern-num">11</div>
+        <div class="concern-title-group"><h2 class="concern-title">Skin Boosters</h2>
+        <div class="concern-count">9 Treatments Available</div></div>
+      </div>
+      <p class="concern-desc">Injectable and microneedling skin boosters delivering targeted actives — from PDRN and polynucleotides to exosomes and botulinum — directly into the dermis for lasting hydration, repair, and glow.</p>
+      <div class="treatments-grid">
+          <div class="treatment-card">
+            <div class="treatment-name">Exosome Skin Booster</div>
+            <div class="treatment-desc">Plant-derived exosomes delivering growth factors to repair the skin barrier, calm inflammation, and stimulate collagen renewal at a cellular level. Results vary by individual. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$600</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Botox Skin Booster</div>
+            <div class="treatment-desc">Micro-doses of botulinum toxin delivered intradermally to reduce sebum, minimise pores, improve redness and rosacea, and refine skin texture. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$600</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Rejuran Healer (Black Box)</div>
+            <div class="treatment-desc">The classic Rejuran PDRN skin booster — restoring elasticity, improving dullness and dryness, and supporting skin regeneration from within. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$600</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Rejuran White Porcelain</div>
+            <div class="treatment-desc">Rejuran's brightening polynucleotide booster activating skin cells, supporting antioxidant defence, and addressing excess melanin for a more even, luminous complexion. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$550</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Rejuran Eye Booster</div>
+            <div class="treatment-desc">Targeted polynucleotide booster applied to the periorbital area to support collagen renewal, soften fine lines, and address dryness around the eyes. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$450</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Filorga NCTF Booster</div>
+            <div class="treatment-desc">A French polynucleotide and hyaluronic acid skin booster — deeply hydrating, locking in moisture, and restoring luminosity to sensitive or dry skin. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$450</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">NEAUIVA Ice Booster</div>
+            <div class="treatment-desc">Biomimetic skin booster supporting the skin's own collagen production, smoothing fine lines, tightening pores, and restoring firmness over a course of treatments. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$499</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">BENEV Baby Needle</div>
+            <div class="treatment-desc">Growth factor skin booster supporting epidermal repair and regeneration, addressing ageing markers, enlarged pores, and surface scarring. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$499</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">PRP Microneedling</div>
+            <div class="treatment-desc">Platelet-rich plasma extracted from your own blood and combined with microneedling to activate cell regeneration, stimulate collagen, and repair damaged skin. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$600</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="concern-section" style="background:var(--champagne);" id="facials">
+    <div class="concern-inner">
+      <div class="concern-left">
+        <div class="concern-num">12</div>
+        <div class="concern-title-group"><h2 class="concern-title">Facials & Skin Care</h2>
+        <div class="concern-count">15 Treatments Available</div></div>
+      </div>
+      <p class="concern-desc">Clinical-grade facial treatments from the world's leading professional skincare brands — each formulated for a specific skin concern and designed to complement your device treatments.</p>
+      <div class="treatments-grid">
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Hydrafacial</div>
+            <div class="treatment-desc">FDA-approved three-step cleanse, extract, and hydrate treatment. Removes congestion, eliminates bacteria, and infuses hydrating actives for immediate radiance. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$169</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Broda Pro BHA Peel</div>
+            <div class="treatment-desc">Medical-grade supramolecular salicylic acid peel penetrating the sebaceous glands to clear congestion, control oil, treat acne, and repair the skin barrier. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$169</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">SkinCeuticals B5 Waterfall</div>
+            <div class="treatment-desc">Vitamin B5 and hyaluronic acid dual-action deep hydration facial — restoring moisture balance, softening fine lines, and leaving skin visibly plump. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$188</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">SkinCeuticals Acne Repair</div>
+            <div class="treatment-desc">Plant-extract intensive treatment rapidly calming redness, soothing sensitivity, fading post-acne marks, and rebuilding the damaged skin barrier. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$188</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">SkinCeuticals Vitamin C</div>
+            <div class="treatment-desc">High-concentration L-ascorbic acid treatment fighting free radical damage, accelerating melanin metabolism, and restoring brightened, firmer skin. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$188</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">POLA Black BA Anti-Aging</div>
+            <div class="treatment-desc">POLA's flagship treatment — 10× concentrated essence with proprietary massage technique and Guinot lifting protocol targeting deep-layer anti-glycation and firming. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$198</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">POLA Golden V-Face</div>
+            <div class="treatment-desc">POLA's most premium facial using RC extract — the only ingredient clinically proven to act on subcutaneous tissue — for significant lifting, contouring, and firming. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$298</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">POLA APEX Acne Control</div>
+            <div class="treatment-desc">Formulated for oily and acne-prone skin — controlling sebum, reducing inflammation, fading acne marks, and tightening enlarged pores. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$198</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Guinot Perfect Firming</div>
+            <div class="treatment-desc">Microcurrent treatment tightening facial contours, improving laxity, smoothing fine lines, and restoring skin elasticity through targeted muscle re-education. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$158</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">Guinot Dual Hydration + Firming</div>
+            <div class="treatment-desc">Combined hydration and lifting treatment — moisturising and locking water while tightening and lifting, comprehensively addressing dryness and sagging. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$198</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">GM Collin Algomask Repair</div>
+            <div class="treatment-desc">Marine algae calming and repair treatment designed for sensitive skin — soothing redness, providing lasting hydration, and accelerating barrier recovery. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$158</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">GM Collin Collagen 90</div>
+            <div class="treatment-desc">The world's first collagen mask treatment — biocompatible collagen replenishing aged, dry, and post-procedure skin with intensive nutrition and structural repair. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$158</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">GM Collin Sea C Spa</div>
+            <div class="treatment-desc">15% Vitamin C, peptides, and sea algae extract combined to brighten, antioxidise, and deeply restore dull, ageing skin to a luminous youthful radiance. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$158</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">GM Collin Oxygenating</div>
+            <div class="treatment-desc">Salicylic acid, AHA, and active oxygen formula fighting inflammation, fading pigmentation, clearing closed comedones, and tightening oily, congested skin. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$158</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card" style="background:var(--champagne-light);">
+            <div class="treatment-name">GM Collin Botinol Anti-Aging</div>
+            <div class="treatment-desc">Retinol, Argireline, and hydrolysed okra protein smoothing expression lines and plumping skin, with copper peptides stimulating new fibroblast growth. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$178</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="concern-section" style="background:var(--white);" id="hair-removal">
+    <div class="concern-inner">
+      <div class="concern-left">
+        <div class="concern-num">13</div>
+        <div class="concern-title-group"><h2 class="concern-title">Laser Hair Removal</h2>
+        <div class="concern-count">6 Treatment Areas</div></div>
+      </div>
+      <p class="concern-desc">FDA-cleared ELITE+ dual-wavelength (755nm + 1064nm) laser hair removal — safe and effective for all skin tones, with permanent reduction after a course of treatments.</p>
+      <div class="treatments-grid">
+          <div class="treatment-card">
+            <div class="treatment-name">Upper Lip</div>
+            <div class="treatment-desc">Precise removal of upper lip hair. Recommended every 4–6 weeks. Annual package available for ongoing maintenance. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>Single / 5-Pack</span>$99 / $300</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Underarms</div>
+            <div class="treatment-desc">Full underarm hair removal. Recommended every 4–6 weeks. Annual unlimited package available. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>Single / 5-Pack</span>$109 / $400</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Lower Leg / Bikini / Full Face</div>
+            <div class="treatment-desc">Precision removal for lower legs, bikini line, or full face. Recommended every 4–6 weeks. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>Single / 5-Pack</span>$150 / $500</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Full Leg</div>
+            <div class="treatment-desc">Complete full-leg hair removal from ankle to upper thigh. Recommended every 8–12 weeks. Two-year package available. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>Single / 5-Pack</span>$200 / $800</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Full Arm / Brazilian / Full Back</div>
+            <div class="treatment-desc">Comprehensive removal for full arms, Brazilian, or full back. Recommended every 4–8 weeks. Annual package available. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>Single / 5-Pack</span>$200 / $800</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+          <div class="treatment-card">
+            <div class="treatment-name">Small Area / Custom</div>
+            <div class="treatment-desc">Custom single-area treatment for chin, sideburns, neck, hands, feet, or any other small zone. Pricing based on area size. <a href="#" class="treatment-learn">learn more →</a></div>
+            <div class="treatment-meta"><div class="treatment-price"><span>From</span>$99</div><a href="#" class="treatment-btn">Book Now</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<div class="visia-strip">
+  <div class="visia-eyebrow">Complimentary Skin Consultation</div>
+  <h2>Not sure where to start?<br><em>VISIA will show you.</em></h2>
+  <p>Every Serica journey begins with a complimentary VISIA skin analysis — building a personalised treatment plan from the inside out.</p>
+  <div class="visia-btns">
+    <a href="#" class="btn-primary">Book Complimentary VISIA</a>
+    <a href="#" class="btn-ghost">What is VISIA?</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-locations">
+    <div style="padding: 0 16px 0 20px; display:flex; justify-content:center;">
+      <div>
+      <div class="footer-loc-name">Serica Skincare & MedSpa</div>
+      <div class="footer-loc-sub">Manhattan · Koreatown</div>
+      <div class="footer-loc-detail">39 W 32nd St, 14th Floor</div>
+      <div class="footer-loc-detail">New York, NY 10001</div>
+      <div class="footer-loc-detail">(212) 000-0000</div>
+      <div class="footer-loc-hours">
+        <div class="footer-loc-hours-title">Hours</div>
+        <div class="hours-row"><span>Mon – Fri</span><span>9:00 AM – 7:00 PM</span></div>
+        <div class="hours-row"><span>Saturday</span><span>10:00 AM – 6:00 PM</span></div>
+        <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+      </div>
+      </div>
+    </div>
+    <div style="padding: 0 20px 0 16px; display:flex; justify-content:center;">
+      <div>
+      <div class="footer-loc-name">RM Serica Skincare</div>
+      <div class="footer-loc-sub">Queens · Flushing</div>
+      <div class="footer-loc-detail">136-18 39th Ave, 11th Floor</div>
+      <div class="footer-loc-detail">Flushing, NY 11354</div>
+      <div class="footer-loc-detail">(718) 557-9998</div>
+      <div class="footer-loc-hours">
+        <div class="footer-loc-hours-title">Hours</div>
+        <div class="hours-row"><span>Mon – Fri</span><span>10:00 AM – 7:00 PM</span></div>
+        <div class="hours-row"><span>Saturday</span><span>10:00 AM – 7:00 PM</span></div>
+        <div class="hours-row"><span>Sunday</span><span>10:00 AM – 7:00 PM</span></div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-links">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Packages</a>
+    <a href="#">Gallery</a>
+    <a href="#">Pricing</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Testimonials</a>
+    <a href="serica-book.html">Book Now</a>
+  </div>
+  <div class="footer-bottom-mobile">
+    <div style="display:flex;align-items:flex-start;gap:14px;padding-top:15px;"><img src="data:image/png;base64,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" alt="Serica Skincare & MedSpa" style="height:60px;width:auto;display:block;"/><div class="footer-logo-mobile" style="margin-top:-4px;">Serica<span>Where Skin Meets Silk</span></div></div>
+    <div class="footer-socials">
+      <a href="#">Instagram</a>
+      <a href="#">WeChat</a>
+      <a href="#">Xiaohongshu</a>
+      <a href="#">Google</a>
+    </div>
+    <div class="footer-copy">© 2026 Serica Skincare & MedSpa. All Rights Reserved. &nbsp;·&nbsp; Privacy Policy &nbsp;·&nbsp; HIPAA Notice</div>
+  </div>
+</footer>
+
+<script>
+const sections = document.querySelectorAll('.concern-section');
+const cnLinks = document.querySelectorAll('.concern-nav a');
+const concernNav = document.querySelector('.concern-nav');
+
+function updateActiveNav() {
+  let current = sections[0].id;
+  const trigger = window.innerHeight * 0.5;
+  sections.forEach(section => {
+    if (section.getBoundingClientRect().top <= trigger) {
+      current = section.id;
+    }
+  });
+  cnLinks.forEach(l => {
+    const isActive = l.getAttribute('href') === '#' + current;
+    l.classList.toggle('active', isActive);
+    if (isActive) {
+      const navWidth = concernNav.offsetWidth;
+      const linkLeft = l.offsetLeft;
+      const linkWidth = l.offsetWidth;
+      concernNav.scrollLeft = linkLeft - (navWidth / 2) + (linkWidth / 2);
+    }
+  });
+}
+
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+requestAnimationFrame(updateActiveNav);
+
+cnLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
